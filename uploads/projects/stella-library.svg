@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgLib" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#311042"/>
+      <stop offset="50%" stop-color="#4a154b"/>
+      <stop offset="100%" stop-color="#1e0b36"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgLib)"/>
+  <circle cx="680" cy="120" r="160" fill="#c084fc" opacity="0.18" filter="blur(60px)"/>
+  <circle cx="120" cy="400" r="150" fill="#f43f5e" opacity="0.18" filter="blur(60px)"/>
+
+  <!-- UI Mockup -->
+  <rect x="120" y="60" width="560" height="380" rx="16" fill="#240c35" stroke="#6b21a8" stroke-width="2"/>
+  <rect x="120" y="60" width="560" height="42" rx="16" fill="#170524"/>
+  <circle cx="150" cy="81" r="5" fill="#ef4444"/>
+  <circle cx="168" cy="81" r="5" fill="#f59e0b"/>
+  <circle cx="186" cy="81" r="5" fill="#10b981"/>
+  <text x="400" y="86" fill="#e9d5ff" font-family="Segoe UI, sans-serif" font-size="12" text-anchor="middle">Stella Digital Smart Library</text>
+
+  <!-- Banner -->
+  <rect x="150" y="125" width="500" height="85" rx="12" fill="url(#purpleGrad)"/>
+  <text x="180" y="162" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="20" font-weight="bold">Katalog Buku &amp; Literasi Digital</text>
+  <text x="180" y="188" fill="#f3e8ff" font-family="Segoe UI, sans-serif" font-size="13">Akses 2.500+ E-book materi kejuruan dan fiksi interaktif</text>
+
+  <!-- Book covers mockup -->
+  <rect x="160" y="235" width="105" height="155" rx="8" fill="#3b0764" stroke="#9333ea" stroke-width="2"/>
+  <text x="212" y="315" fill="#e9d5ff" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">Web Dev XI</text>
+
+  <rect x="290" y="235" width="105" height="155" rx="8" fill="#3b0764" stroke="#9333ea" stroke-width="2"/>
+  <text x="342" y="315" fill="#e9d5ff" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">Basis Data</text>
+
+  <rect x="420" y="235" width="105" height="155" rx="8" fill="#3b0764" stroke="#9333ea" stroke-width="2"/>
+  <text x="472" y="315" fill="#e9d5ff" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">UI/UX Design</text>
+
+  <rect x="550" y="235" width="100" height="155" rx="8" fill="#3b0764" stroke="#9333ea" stroke-width="2"/>
+  <text x="600" y="315" fill="#e9d5ff" font-family="Segoe UI, sans-serif" font-size="11" text-anchor="middle">Jaringan</text>
+</svg>
