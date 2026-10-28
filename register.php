@@ -1,2 +1,2 @@
 <?php
-require __DIR__ . '/pages/auth/register.php';
+require __DIR__ . '/auth/register.php';

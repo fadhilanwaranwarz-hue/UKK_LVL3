@@ -42,11 +42,11 @@ CREATE TABLE IF NOT EXISTS projects (
 -- 3. Akun Default (Password untuk semua akun: password123)
 -- ----------------------------------------------------------------------------
 INSERT INTO users (nama, email, password, role) VALUES
-('Super Admin Stella', 'superadmin@stella.sch.id', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHe1xlb1G5X5K8d.V0eQ06b3Ff9p5K9e.', 'super_admin'),
-('Admin Stella', 'admin@stella.sch.id', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHe1xlb1G5X5K8d.V0eQ06b3Ff9p5K9e.', 'admin'),
-('Siswa Contoh', 'siswa@stella.sch.id', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHe1xlb1G5X5K8d.V0eQ06b3Ff9p5K9e.', 'siswa'),
-('Ahmad Fadhil Anwar', 'fadhil@stella.sch.id', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHe1xlb1G5X5K8d.V0eQ06b3Ff9p5K9e.', 'siswa')
-ON DUPLICATE KEY UPDATE nama = VALUES(nama);
+('Super Admin Stella', 'superadmin@stella.sch.id', '$2y$10$y.ieJt/ZYU1wEmiBANZw4O.jqyBqgQcpOiOZff46lHpsgd8auj8lK', 'super_admin'),
+('Admin Stella', 'admin@stella.sch.id', '$2y$10$y.ieJt/ZYU1wEmiBANZw4O.jqyBqgQcpOiOZff46lHpsgd8auj8lK', 'admin'),
+('Siswa Contoh', 'siswa@stella.sch.id', '$2y$10$y.ieJt/ZYU1wEmiBANZw4O.jqyBqgQcpOiOZff46lHpsgd8auj8lK', 'siswa'),
+('Ahmad Fadhil Anwar', 'fadhil@stella.sch.id', '$2y$10$y.ieJt/ZYU1wEmiBANZw4O.jqyBqgQcpOiOZff46lHpsgd8auj8lK', 'siswa')
+ON DUPLICATE KEY UPDATE nama = VALUES(nama), password = VALUES(password);
 
 -- ----------------------------------------------------------------------------
 -- 4. Sample Data Project

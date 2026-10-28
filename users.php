@@ -1,2 +1,2 @@
 <?php
-require __DIR__ . '/pages/admin/users.php';
+require __DIR__ . '/admin/users.php';

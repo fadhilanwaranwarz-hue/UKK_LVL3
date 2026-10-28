@@ -1,2 +1,2 @@
 <?php
-require __DIR__ . '/pages/projects/dashboard.php';
+require __DIR__ . '/admin/index.php';

@@ -1,2 +1,2 @@
 <?php
-require __DIR__ . '/pages/auth/logout.php';
+require __DIR__ . '/auth/logout.php';

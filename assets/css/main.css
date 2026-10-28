@@ -1,0 +1,401 @@
+/* ==========================================================================
+   assets/css/main.css
+   Styling Etalase Utama (index.php) - Hero, Filter, Katalog & Card Grid
+   Etalase Digital - SMK Telkom Lampung
+   ========================================================================== */
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: clamp(1rem, 3vw, 2rem);
+  text-align: center;
+  border: 1px solid rgba(191, 219, 254, 0.35);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);
+}
+
+.hero-section::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(125deg, rgba(8, 25, 62, 0.82), rgba(29, 78, 216, 0.72) 55%, rgba(8, 145, 178, 0.6)),
+    url("../images/beckground.jpeg") center / cover no-repeat;
+  content: "";
+}
+
+.hero-panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 940px);
+  margin: 0 auto;
+  padding: clamp(1.75rem, 5vw, 3.75rem);
+  animation: hero-enter 700ms ease-out both;
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-glow {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(ellipse at top right, rgba(34, 211, 238, 0.28), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  padding: 0.5rem 1.1rem;
+  background: rgba(186, 230, 253, 0.18);
+  border: 1px solid rgba(186, 230, 253, 0.45);
+  border-radius: var(--radius-full);
+  color: #e0f2fe;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(3, 15, 42, 0.12);
+  margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, #a5f3fc, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+  max-width: 690px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: #e0f2fe;
+  line-height: 1.7;
+}
+
+/* Identitas Pribadi Pembuat (Author Card) */
+.hero-author-card {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  gap: 0.85rem;
+  padding: 0.6rem 1.25rem 0.6rem 0.6rem;
+  background: rgba(8, 47, 105, 0.58);
+  border: 1px solid rgba(191, 219, 254, 0.4);
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 24px rgba(3, 15, 42, 0.18);
+  text-align: left;
+  transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-author-card:hover {
+  transform: translateY(-2px);
+  background: rgba(8, 47, 105, 0.72);
+  box-shadow: 0 12px 28px rgba(3, 15, 42, 0.25);
+}
+
+.hero-author-avatar {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.hero-author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.hero-author-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.hero-author-school {
+  font-size: 0.78rem;
+  color: #dbeafe;
+}
+
+/* Statistics Counter Bar */
+.stats-bar {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stat-item:not(:last-child) {
+  border-right: 1px solid var(--color-border);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Filter & Search Bar */
+.search-bar-wrap {
+  margin-bottom: 2.5rem;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+  background: #ffffff;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: transparent;
+}
+
+/* Project Cards Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-border-hover);
+}
+
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-img {
+  transform: scale(1.04);
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.85rem;
+}
+
+.author-tag {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.author-tag > div:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.author-tag-avatar {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  border-radius: 50%;
+  background: var(--color-indigo);
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.author-tag-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .stat-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 0.75rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-panel {
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-badge {
+    border-radius: var(--radius-md);
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+
+  .hero-author-card {
+    gap: 0.65rem;
+    padding-right: 0.85rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .hero-author-school {
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-panel {
+    animation: none;
+  }
+
+  .hero-author-card {
+    transition: none;
+  }
+}
